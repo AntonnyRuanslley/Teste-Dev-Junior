@@ -1,0 +1,48 @@
+body {
+    min-height: 65rem;
+    padding-top: 3.5rem;
+}
+
+.menu{
+    padding-bottom: 3px;
+}
+
+.cadastro{
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 0rem !important;
+    border-radius: 0rem;    
+}
+.topo{
+    font-size: 30px;   
+}
+
+#cpf{
+    width:140px;
+}
+
+#rg{
+    width:130px;
+}
+
+#cep, #numero{
+    width:115px;
+}
+
+#uf{
+    width:80px;
+}
+
+#numero{
+    width:70px;
+}
+
+.rodape{
+    padding-top: 30px;
+    padding-bottom: 80px;
+    background-color: #090622;
+    margin-bottom: 0rem !important;
+    color: #fff;
+    border-radius: 0px;
+}
