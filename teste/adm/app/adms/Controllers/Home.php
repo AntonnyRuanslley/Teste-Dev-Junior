@@ -10,6 +10,7 @@ if(!defined('R4F5CC')){
 class Home
 {    
     public function index() { 
-        echo "Página Home<br>";
+        $carregarView = new \Core\ConfigView("adms/Views/home/home");
+        $carregarView->renderizar();
     }
 }

@@ -21,6 +21,8 @@ class ConfigController
 
     public function carregar() {
         $this->config();
+        $valPermissao= new \Core\Permissao();
+        $valPermissao->index($this->url);
         $urlController = ucwords($this->url);
         $classe = "\\App\\adms\\Controllers\\" . $urlController;
         $classeCarregar = new $classe;
@@ -28,7 +30,7 @@ class ConfigController
     }
 
     private function config() {
-        define('URL', 'http://localhost/teste/adm/');
+        define('URLADM', 'http://localhost/teste/adm/');
     }
 
 }

@@ -1,15 +1,12 @@
 $(document).ready(function () {
     $('#insert_form').on("submit", function (event) {
         event.preventDefault();
-        if ($('#nome').val() === "") {
-            $(".msg").html('<div class="alert alert-danger">Erro: Necessário preencher o campo nome!</div>');
-        } else if ($('#email').val() === "") {
-            $(".msg").html('<div class="alert alert-danger">Erro: Necessário preencher o campo e-mail!</div>');
-        } else if ($('#cpf').val() === "") {
-            $(".msg").html('<div class="alert alert-danger">Erro: Necessário preencher o campo assunto!</div>');
-        }else if ($('#rg').val() === "") {
-            $(".msg").html('<div class="alert alert-danger">Erro: Necessário preencher o campo conteúdo!</div>');
-        }else {
+        if ($('#nome').val() === "" || $('#email').val() === "" || $('#cpf').val() === "" || 
+            $('#rg').val() === "" || $('#cep').val() === "" || $('#rua').val() === "" || 
+            $('#numero').val() === "" || $('#bairro').val() === "" || $('#cidade').val() === "" || 
+            $('#uf').val() === "" /*|| $('#imcpf').val() === "" || $('#imrg').val() === ""*/) {
+            $(".msg").html('<div class="alert alert-danger">Preencha corretamente os dados.</div>');
+        } else {
             //Receber os dados do formulário
             var dados = $("#insert_form").serialize();  
             var url = $('#url').val();

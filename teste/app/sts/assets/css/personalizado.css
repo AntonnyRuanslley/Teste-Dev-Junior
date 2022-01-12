@@ -19,23 +19,23 @@ body {
 }
 
 #cpf{
-    width:140px;
+    width:160px;
 }
 
 #rg{
-    width:130px;
+    width:140px;
 }
 
-#cep, #numero{
-    width:115px;
-}
-
-#uf{
-    width:80px;
+#cep{
+    width:125px;
 }
 
 #numero{
-    width:70px;
+    width:98px;
+}
+
+#uf{
+    width:90px;
 }
 
 .rodape{

@@ -32,67 +32,87 @@ if(!defined('R4F5CC')){
             <div class="row">
                 <div class="col-lg-4">
                     <span class="msg"></span>
-                    <form method="POST" id="insert_form">
+                    <form method="POST" id="insert_form" class="needs-validation" novalidate>
                         <input type="hidden" name="url" id="url" value="<?php echo URL; ?>contato">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" >
+                            <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" required>
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input type="email" name="email" class="form-control" id="email" >
+                            <input type="email" name="email" class="form-control" id="email" required>
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-7">
+                            <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="cpf">CPF</label>
-                                    <input type="text" name="cpf" class="form-control" id="cpf" onkeypress="$(this).mask('000.000.000-00');" placeholder="___.___.___-__" >
+                                    <input type="text" name="cpf" class="form-control" id="cpf" onkeypress="$(this).mask('000.000.000-00');" placeholder="___.___.___-__" required>
+                                    <div class="valid-feedback">Ok!</div>
+                                    <div class="invalid-feedback">Campo obrigatorio!</div>
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="form-group">
                                     <label for="rg">RG</label>
-                                    <input type="text" name="rg" class="form-control" id="rg" onkeypress="$(this).mask('00.000.000-0');" placeholder="__.___.___-_" >
+                                    <input type="text" name="rg" class="form-control" id="rg" onkeypress="$(this).mask('00.000.000-0');" placeholder="__.___.___-_" required>
+                                    <div class="valid-feedback">Ok!</div>
+                                    <div class="invalid-feedback">Campo obrigatorio!</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label for="cep">CEP</label>
-                                    <input type="text" name="cep" class="form-control" id="cep" onkeypress="$(this).mask('00000-000')" onblur="pesquisacep(this.value);" placeholder="_____-___" >
-                                </div>    
+                        <div class="form-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" class="form-control" id="cep" onkeypress="$(this).mask('00000-000')" onblur="pesquisacep(this.value);" placeholder="_____-___" required>
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
+                        </div> 
+                        <div class="form-group">
+                            <label for="rua">Rua</label>
+                            <input type="text" name="rua" class="form-control" id="rua" required>
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
+                            </div> 
+                        <div class="row">   
+                            <div class="col-lg-4">   
                                 <div class="form-group">
                                     <label for="numero">Número</label>
-                                    <input type="number" name="numero" class="form-control" id="numero" >
+                                    <input type="number" name="numero" class="form-control" id="numero" required>
+                                    <div class="valid-feedback">Ok!</div>
+                                    <div class="invalid-feedback">Campo obrigatorio!</div>
                                 </div>    
                             </div>
-                            <div class="col-lg-8">
-                                <div class="form-group">
-                                    <label for="rua">Rua</label>
-                                    <input type="text" name="rua" class="form-control" id="rua" >
-                                </div>     
+                            <div class="col-lg-8">    
                                 <div class="form-group">
                                     <label for="bairro">Bairro</label>
-                                    <input type="text" name="bairro" class="form-control" id="bairro" >
+                                    <input type="text" name="bairro" class="form-control" id="bairro" required>
+                                    <div class="valid-feedback">Ok!</div>
+                                    <div class="invalid-feedback">Campo obrigatorio!</div>
                                 </div>  
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="complemento">Complemento</label>
                             <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Ex: Casa, Apto., ..." >
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
                         </div>
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="form-group">
                                     <label for="cidade">Cidade</label>
-                                    <input type="text" name="cidade" class="form-control" id="cidade" >
+                                    <input type="text" name="cidade" class="form-control" id="cidade" required>
+                                    <div class="valid-feedback">Ok!</div>
+                                    <div class="invalid-feedback">Campo obrigatorio!</div>
                                 </div>       
                             </div>
                             <div class="col-lg-4">     
                                 <div class="form-group">
                                     <label for="uf">UF</label>
-                                    <select name="uf" class="form-control" id="uf" >
+                                    <select name="uf" class="form-control" id="uf" required>
                                         <option selected disabled value="">----</option>
                                         <option>AC</option><option>AL</option>
                                         <option>AP</option><option>AM</option>
@@ -109,20 +129,28 @@ if(!defined('R4F5CC')){
                                         <option>SP</option><option>SE</option>
                                         <option>TO</option>
                                     </select>
+                                    <div class="valid-feedback">Ok!</div>
+                                    <div class="invalid-feedback">Campo obrigatorio!</div>
                                 </div>  
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
-                            <textarea name="descricao" class="form-control" rows="3" id="descricao" ></textarea>
+                            <textarea name="descricao" class="form-control" rows="3" id="descricao"></textarea>
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
                         </div>
                         <div class="form-group">
                             <label for="imcpf">Imagem do CPF</label>
                             <input type="file" name='imcpf' id="imcpf" >
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
                         </div>
                         <div class="form-group">
                             <label for="imrg">Imagem do RG</label>
                             <input type="file" name='imrg' id="imrg" >
+                            <div class="valid-feedback">Ok!</div>
+                            <div class="invalid-feedback">Campo obrigatorio!</div>
                         </div>
                         <input type="submit" name="botao" id="botao" value="Cadastrar" class="btn btn-primary">
                     </form>
